@@ -1,12 +1,73 @@
-# React + Vite
+# 🔁 useRef Click Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React app demonstrating how to use the useRef hook to persist data across renders without triggering re-renders. This app counts button clicks in real-time while keeping the UI updates efficient.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## Expanding the ESLint configuration
+- Real-Time Click Tracking — Tracks how many times a button is clicked.
+- Persistent Values — Click count is stored using useRef, so it’s not reset on re-renders.
+- Efficient Performance — Avoids unnecessary re-rendering with useRef.
+- Manual Re-render Trigger — Uses a dummy useState to refresh the UI and display updated counts.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- React (Hooks: useRef, useState)
+- JavaScript (ES6)
+- CSS Inline Styling
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── App.js # Root component
+├── ClickTracker.js # Main click tracking logic
+└── index.js # React entry point
+```
+
+---
+
+## 🚀 Getting Started
+
+1️⃣ Clone the repository
+git clone https://github.com/yourusername/useref-click-tracker.git
+cd useref-click-tracker
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Run the application
+npm start
+
+Runs the app at http://localhost:3000
+
+## 📖 How It Works
+
+1 State vs. Ref
+_ useRef stores the click count without causing a re-render.
+_ useState (fakeState) is only used to trigger manual UI updates when needed.
+
+2 Click Handling
+
+```
+function handleClick() {
+currentRef.current++;
+setFakeState(prev => prev + 1);
+}
+```
+
+    * Increments the click count stored in the useRef.
+    * Updates the dummy state to refresh the displayed count.
+
+3 UI Display \* Button and count display are centrally aligned for a minimal design.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
