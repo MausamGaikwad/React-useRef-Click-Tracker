@@ -35,17 +35,19 @@ src/
 ## 🚀 Getting Started
 
 1️⃣ Clone the repository
+```
 git clone https://github.com/yourusername/useref-click-tracker.git
 cd useref-click-tracker
-
+```
 2️⃣ Install dependencies
-npm install
+```npm install```
 
 3️⃣ Run the application
-npm start
+```npm start```
 
 Runs the app at http://localhost:3000
 
+---
 ## 📖 How It Works
 
 1 State vs. Ref
@@ -60,9 +62,8 @@ currentRef.current++;
 setFakeState(prev => prev + 1);
 }
 ```
-
-    * Increments the click count stored in the useRef.
-    * Updates the dummy state to refresh the displayed count.
+   * Increments the click count stored in the useRef.
+   * Updates the dummy state to refresh the displayed count.
 
 3 UI Display \* Button and count display are centrally aligned for a minimal design.
 
