@@ -36,16 +36,18 @@ src/
 
 1️⃣ Clone the repository
 ```
-git clone https://github.com/yourusername/useref-click-tracker.git
+git clone https://github.com/MausamGaikwad/React-useRef-Click-Tracker.git
 cd useref-click-tracker
 ```
 2️⃣ Install dependencies
-```npm install```
+```
+npm install
+```
 
 3️⃣ Run the application
-```npm start```
-
-Runs the app at http://localhost:3000
+```
+npm start
+```
 
 ---
 ## 📖 How It Works
